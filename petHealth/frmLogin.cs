@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace petHealth
 {
-    public partial class loginPage : Form
+    public partial class frmLogin : Form
     {
-        public loginPage()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -38,5 +38,19 @@ namespace petHealth
             Application.Run(new frmSignUp());
         }
 
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            //Close current form
+            this.Close();
+            //Create a thread to RUN a NEW application with the desired form
+            Thread t = new Thread(new ThreadStart(OpenHomeForm));
+            t.Start();
+        }
+
+        private void OpenHomeForm()
+        {
+            //RUNs a NEW application with the desired form
+            Application.Run(new frmHome());
+        }
     }
 }

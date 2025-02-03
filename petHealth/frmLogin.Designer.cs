@@ -1,6 +1,6 @@
 ﻿namespace petHealth
 {
-    partial class loginPage
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblLogin.Location = new System.Drawing.Point(337, 32);
+            this.lblLogin.Location = new System.Drawing.Point(332, 43);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(123, 24);
             this.lblLogin.TabIndex = 0;
@@ -53,7 +53,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(240, 117);
+            this.txtUsername.Location = new System.Drawing.Point(235, 128);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(313, 25);
             this.txtUsername.TabIndex = 8;
@@ -63,7 +63,7 @@
             this.lblNoAccount.AutoSize = true;
             this.lblNoAccount.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoAccount.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblNoAccount.Location = new System.Drawing.Point(273, 355);
+            this.lblNoAccount.Location = new System.Drawing.Point(268, 366);
             this.lblNoAccount.Name = "lblNoAccount";
             this.lblNoAccount.Size = new System.Drawing.Size(187, 18);
             this.lblNoAccount.TabIndex = 7;
@@ -74,7 +74,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblPassword.Location = new System.Drawing.Point(237, 166);
+            this.lblPassword.Location = new System.Drawing.Point(232, 177);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(81, 18);
             this.lblPassword.TabIndex = 6;
@@ -85,7 +85,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblUsername.Location = new System.Drawing.Point(237, 87);
+            this.lblUsername.Location = new System.Drawing.Point(232, 98);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(84, 18);
             this.lblUsername.TabIndex = 5;
@@ -94,7 +94,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(240, 196);
+            this.txtPassword.Location = new System.Drawing.Point(235, 207);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(313, 25);
             this.txtPassword.TabIndex = 9;
@@ -104,7 +104,7 @@
             this.goForgorPass.AutoSize = true;
             this.goForgorPass.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goForgorPass.LinkColor = System.Drawing.Color.MediumBlue;
-            this.goForgorPass.Location = new System.Drawing.Point(432, 234);
+            this.goForgorPass.Location = new System.Drawing.Point(427, 245);
             this.goForgorPass.Name = "goForgorPass";
             this.goForgorPass.Size = new System.Drawing.Size(121, 18);
             this.goForgorPass.TabIndex = 10;
@@ -116,7 +116,7 @@
             this.goSignUp.AutoSize = true;
             this.goSignUp.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goSignUp.LinkColor = System.Drawing.Color.MediumBlue;
-            this.goSignUp.Location = new System.Drawing.Point(454, 355);
+            this.goSignUp.Location = new System.Drawing.Point(449, 366);
             this.goSignUp.Name = "goSignUp";
             this.goSignUp.Size = new System.Drawing.Size(62, 18);
             this.goSignUp.TabIndex = 11;
@@ -129,14 +129,15 @@
             this.btnSignIn.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSignIn.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSignIn.Location = new System.Drawing.Point(315, 276);
+            this.btnSignIn.Location = new System.Drawing.Point(310, 287);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(166, 52);
             this.btnSignIn.TabIndex = 12;
             this.btnSignIn.Text = "Sign In!";
             this.btnSignIn.UseVisualStyleBackColor = false;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
-            // loginPage
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,8 +152,8 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblLogin);
-            this.Name = "loginPage";
-            this.Text = "LogIn";
+            this.Name = "frmLogin";
+            this.Text = "frmLogin";
             this.Load += new System.EventHandler(this.loginPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
