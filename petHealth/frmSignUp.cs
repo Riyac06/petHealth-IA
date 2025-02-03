@@ -17,11 +17,6 @@ namespace petHealth
             InitializeComponent();
         }
 
-        public frmSignUp(string test)
-        {
-            string s = test;
-        }
-
         private void frmSignUp_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
