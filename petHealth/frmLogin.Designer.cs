@@ -110,6 +110,7 @@
             this.goForgorPass.TabIndex = 10;
             this.goForgorPass.TabStop = true;
             this.goForgorPass.Text = "Forgot Password?";
+            this.goForgorPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.goForgorPass_LinkClicked);
             // 
             // goSignUp
             // 

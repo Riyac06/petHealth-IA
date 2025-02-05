@@ -16,5 +16,10 @@ namespace petHealth
         {
             InitializeComponent();
         }
+
+        private void frmVaxRecord_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }

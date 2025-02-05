@@ -52,5 +52,20 @@ namespace petHealth
             //RUNs a NEW application with the desired form
             Application.Run(new frmHome());
         }
+
+        private void goForgorPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Close current form
+            this.Close();
+            //Create a thread to RUN a NEW application with the desired form
+            Thread t = new Thread(new ThreadStart(OpenForgorPassForm));
+            t.Start();
+        }
+
+        private void OpenForgorPassForm()
+        {
+            //RUNs a NEW application with the desired form
+            Application.Run(new frmForgorPass());
+        }
     }
 }

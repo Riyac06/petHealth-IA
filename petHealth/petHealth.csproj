@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmForgorPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgorPass.Designer.cs">
+      <DependentUpon>frmForgorPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAppScheduler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     <Compile Include="frmPetProfiles.Designer.cs">
       <DependentUpon>frmPetProfiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmResetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResetPass.Designer.cs">
+      <DependentUpon>frmResetPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,14 +102,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAppScheduler.resx">
+      <DependentUpon>frmAppScheduler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgorPass.resx">
+      <DependentUpon>frmForgorPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmObsJournal.resx">
+      <DependentUpon>frmObsJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPetProfiles.resx">
+      <DependentUpon>frmPetProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResetPass.resx">
+      <DependentUpon>frmResetPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVaxRecord.resx">
+      <DependentUpon>frmVaxRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

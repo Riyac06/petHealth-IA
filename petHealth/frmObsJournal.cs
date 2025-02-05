@@ -16,5 +16,10 @@ namespace petHealth
         {
             InitializeComponent();
         }
+
+        private void frmObsJournal_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }
