@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAppScheduler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAppScheduler.Designer.cs">
+      <DependentUpon>frmAppScheduler.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,11 +64,29 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmObsJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmObsJournal.Designer.cs">
+      <DependentUpon>frmObsJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPetProfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPetProfiles.Designer.cs">
+      <DependentUpon>frmPetProfiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSignUp.Designer.cs">
       <DependentUpon>frmSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVaxRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVaxRecord.Designer.cs">
+      <DependentUpon>frmVaxRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

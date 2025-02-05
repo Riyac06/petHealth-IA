@@ -57,6 +57,7 @@
             this.btnpetProfiles.TabIndex = 13;
             this.btnpetProfiles.Text = "Pet Profiles!";
             this.btnpetProfiles.UseVisualStyleBackColor = false;
+            this.btnpetProfiles.Click += new System.EventHandler(this.btnpetProfiles_Click);
             // 
             // btnObsjour
             // 
@@ -69,6 +70,7 @@
             this.btnObsjour.TabIndex = 14;
             this.btnObsjour.Text = "Observation Journal!";
             this.btnObsjour.UseVisualStyleBackColor = false;
+            this.btnObsjour.Click += new System.EventHandler(this.btnObsjour_Click);
             // 
             // btnVaxRec
             // 
@@ -81,6 +83,7 @@
             this.btnVaxRec.TabIndex = 15;
             this.btnVaxRec.Text = "Vaccination Record";
             this.btnVaxRec.UseVisualStyleBackColor = false;
+            this.btnVaxRec.Click += new System.EventHandler(this.btnVaxRec_Click);
             // 
             // btnApptSched
             // 
@@ -93,6 +96,7 @@
             this.btnApptSched.TabIndex = 16;
             this.btnApptSched.Text = "Appointment Scheduler";
             this.btnApptSched.UseVisualStyleBackColor = false;
+            this.btnApptSched.Click += new System.EventHandler(this.btnApptSched_Click);
             // 
             // frmHome
             // 
