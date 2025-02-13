@@ -2,15 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace petHealth.Services
 {
     public static class ReadWriteTextFile
     {
         private static List<Pet> pets;
+        private static List<PetObservation> petobservation;
 
         public static List<Pet> GetPetData(string file)
         {
@@ -80,6 +79,48 @@ namespace petHealth.Services
             }
 
             return true;
+        }
+
+        public static List<PetObservation> GetPetObservation(string file)
+        {
+            petobservation = new List<PetObservation>();
+            string line = string.Empty;
+
+            try
+            {
+                //Check if the file exists
+                if (File.Exists(file))
+                {
+                    //Create a Stream Reader
+                    using (StreamReader rdr = new StreamReader(file))
+                    {
+                        //Read the data in the file
+                        while ((line = rdr.ReadLine()) != null)
+                        {
+                            string[] data = line.Split('|');
+
+                            //Add data to the Customers Model
+                            petobservation.Add(new PetObservation()
+                            {
+                                Name = data[0],
+                                dt = DateTime.Parse(data[1]),
+                                Observation = data[2]
+                            });
+
+                        }
+                    }
+                }
+                else
+                {
+                    throw new Exception("File Not Found!");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return petobservation;
         }
     }
 }

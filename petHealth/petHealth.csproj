@@ -107,6 +107,7 @@
       <DependentUpon>frmVaxRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CurrentPath.cs" />
+    <Compile Include="Models\PetObservation.cs" />
     <Compile Include="Models\Pet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -165,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LocalData\PetData.txt" />
+    <Content Include="LocalData\PetObservation.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
