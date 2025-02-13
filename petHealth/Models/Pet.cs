@@ -1,4 +1,5 @@
-﻿using System;
+﻿using petHealth.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,8 +25,9 @@ namespace petHealth.Models
         {
             List<Pet> pets = new List<Pet>();
 
-            string file = CurrentPath.GetDbasePath() + "\\" + "PetData";
+            string file = CurrentPath.GetDbasePath() + "\\" + "PetData.txt";
             
+            pets = ReadWriteTextFile.GetPetData(file);
 
             return pets; 
         }
