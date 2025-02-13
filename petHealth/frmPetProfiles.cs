@@ -20,6 +20,43 @@ namespace petHealth
         private void frmPetProfiles_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            this.SetControls();
+        }
+
+        private void SetControls()
+        {
+            if (this.cboPet.Items.Count == 0)
+            {
+                this.btnAddPet.Enabled = false;
+                this.btnObsjour.Enabled = false;
+                this.btnVaxRec.Enabled = false;
+            }
+            else
+            {
+                this.btnAddPet.Enabled = true;
+                this.btnObsjour.Enabled = true;
+                this.btnVaxRec.Enabled = true;
+            }
+        }
+
+        private void btnPet1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnObsjour_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVaxRec_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddPet_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
