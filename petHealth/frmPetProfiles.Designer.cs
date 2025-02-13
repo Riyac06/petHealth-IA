@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.btnAddPet = new System.Windows.Forms.Button();
-            this.btnVaxRec = new System.Windows.Forms.Button();
-            this.btnObsjour = new System.Windows.Forms.Button();
-            this.btnPet1 = new System.Windows.Forms.Button();
             this.lblPetProfiles = new System.Windows.Forms.Label();
             this.cboPet = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -48,45 +45,6 @@
             this.btnAddPet.Text = "Add Pet";
             this.btnAddPet.UseVisualStyleBackColor = false;
             this.btnAddPet.Click += new System.EventHandler(this.btnAddPet_Click);
-            // 
-            // btnVaxRec
-            // 
-            this.btnVaxRec.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnVaxRec.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVaxRec.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVaxRec.Location = new System.Drawing.Point(312, 287);
-            this.btnVaxRec.Name = "btnVaxRec";
-            this.btnVaxRec.Size = new System.Drawing.Size(166, 72);
-            this.btnVaxRec.TabIndex = 20;
-            this.btnVaxRec.Text = "Vaccination Record";
-            this.btnVaxRec.UseVisualStyleBackColor = false;
-            this.btnVaxRec.Click += new System.EventHandler(this.btnVaxRec_Click);
-            // 
-            // btnObsjour
-            // 
-            this.btnObsjour.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnObsjour.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObsjour.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnObsjour.Location = new System.Drawing.Point(312, 209);
-            this.btnObsjour.Name = "btnObsjour";
-            this.btnObsjour.Size = new System.Drawing.Size(166, 72);
-            this.btnObsjour.TabIndex = 19;
-            this.btnObsjour.Text = "Observation Journal!";
-            this.btnObsjour.UseVisualStyleBackColor = false;
-            this.btnObsjour.Click += new System.EventHandler(this.btnObsjour_Click);
-            // 
-            // btnPet1
-            // 
-            this.btnPet1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnPet1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPet1.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnPet1.Location = new System.Drawing.Point(312, 129);
-            this.btnPet1.Name = "btnPet1";
-            this.btnPet1.Size = new System.Drawing.Size(166, 74);
-            this.btnPet1.TabIndex = 18;
-            this.btnPet1.Text = "Pet 1\'s name!";
-            this.btnPet1.UseVisualStyleBackColor = false;
-            this.btnPet1.Click += new System.EventHandler(this.btnPet1_Click);
             // 
             // lblPetProfiles
             // 
@@ -116,9 +74,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cboPet);
             this.Controls.Add(this.btnAddPet);
-            this.Controls.Add(this.btnVaxRec);
-            this.Controls.Add(this.btnObsjour);
-            this.Controls.Add(this.btnPet1);
             this.Controls.Add(this.lblPetProfiles);
             this.Name = "frmPetProfiles";
             this.Text = "frmPetProfiles";
@@ -131,9 +86,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnAddPet;
-        private System.Windows.Forms.Button btnVaxRec;
-        private System.Windows.Forms.Button btnObsjour;
-        private System.Windows.Forms.Button btnPet1;
         private System.Windows.Forms.Label lblPetProfiles;
         private System.Windows.Forms.ComboBox cboPet;
     }
