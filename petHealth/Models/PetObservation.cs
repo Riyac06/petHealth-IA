@@ -23,7 +23,7 @@ namespace petHealth.Models
         {
             List<PetObservation> petobservation = new List<PetObservation>();
 
-            string file = CurrentPath.GetDbasePath() + "\\" + "PetObservationData.txt";
+            string file = CurrentPath.GetDbasePath() + "\\" + "PetObservation.txt";
 
             petobservation = ReadWriteTextFile.GetPetObservation(file);
 

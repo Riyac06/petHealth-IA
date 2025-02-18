@@ -37,8 +37,10 @@
             this.lblAboutMe = new System.Windows.Forms.Label();
             this.lblObsJournal = new System.Windows.Forms.Label();
             this.lblVaxRecord = new System.Windows.Forms.Label();
-            this.listBoxObs = new System.Windows.Forms.ListBox();
-            this.listBoxVax = new System.Windows.Forms.ListBox();
+            this.dgJournal = new System.Windows.Forms.DataGridView();
+            this.dgVaccination = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgJournal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVaccination)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddPet
@@ -141,21 +143,21 @@
             this.lblVaxRecord.TabIndex = 28;
             this.lblVaxRecord.Text = "Vaccination Record: ";
             // 
-            // listBoxObs
+            // dgJournal
             // 
-            this.listBoxObs.FormattingEnabled = true;
-            this.listBoxObs.Location = new System.Drawing.Point(188, 160);
-            this.listBoxObs.Name = "listBoxObs";
-            this.listBoxObs.Size = new System.Drawing.Size(413, 95);
-            this.listBoxObs.TabIndex = 32;
+            this.dgJournal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgJournal.Location = new System.Drawing.Point(188, 160);
+            this.dgJournal.Name = "dgJournal";
+            this.dgJournal.Size = new System.Drawing.Size(376, 100);
+            this.dgJournal.TabIndex = 29;
             // 
-            // listBoxVax
+            // dgVaccination
             // 
-            this.listBoxVax.FormattingEnabled = true;
-            this.listBoxVax.Location = new System.Drawing.Point(188, 284);
-            this.listBoxVax.Name = "listBoxVax";
-            this.listBoxVax.Size = new System.Drawing.Size(413, 95);
-            this.listBoxVax.TabIndex = 33;
+            this.dgVaccination.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgVaccination.Location = new System.Drawing.Point(188, 284);
+            this.dgVaccination.Name = "dgVaccination";
+            this.dgVaccination.Size = new System.Drawing.Size(376, 100);
+            this.dgVaccination.TabIndex = 30;
             // 
             // frmPetProfiles
             // 
@@ -163,8 +165,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBoxVax);
-            this.Controls.Add(this.listBoxObs);
+            this.Controls.Add(this.dgVaccination);
+            this.Controls.Add(this.dgJournal);
             this.Controls.Add(this.lblVaxRecord);
             this.Controls.Add(this.lblObsJournal);
             this.Controls.Add(this.lblAboutMe);
@@ -175,8 +177,10 @@
             this.Controls.Add(this.btnAddPet);
             this.Controls.Add(this.lblPetProfiles);
             this.Name = "frmPetProfiles";
-            this.Text = "frmPetProfiles";
+            this.Text = "Pet Profiles";
             this.Load += new System.EventHandler(this.frmPetProfiles_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgJournal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVaccination)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,7 +197,7 @@
         private System.Windows.Forms.Label lblAboutMe;
         private System.Windows.Forms.Label lblObsJournal;
         private System.Windows.Forms.Label lblVaxRecord;
-        private System.Windows.Forms.ListBox listBoxObs;
-        private System.Windows.Forms.ListBox listBoxVax;
+        private System.Windows.Forms.DataGridView dgJournal;
+        private System.Windows.Forms.DataGridView dgVaccination;
     }
 }

@@ -15,6 +15,7 @@ namespace petHealth
     public partial class frmPetProfiles : Form
     {
         List<Pet> pets = new List<Pet>();
+        List<PetObservation> petObservations = new List<PetObservation>();
 
         public frmPetProfiles()
         {
@@ -24,8 +25,24 @@ namespace petHealth
         private void frmPetProfiles_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+
+            //Pet Info
             this.GetPets();
+            this.GetObservations();
+            this.PetVaccinations();
+
             this.SetControls();
+        }
+
+        private void PetVaccinations()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void GetObservations()
+        {
+            PetObservation observation = new PetObservation();
+            petObservations = observation.GetPetObersvation();
         }
 
         private void GetPets()
@@ -80,6 +97,21 @@ namespace petHealth
                 this.lblWeight.Text = "Weight: " + selected[0].Weight;
                 this.lblBreed.Text = "Breed: " + selected[0].Breed;
                 this.lblAboutMe.Text = "About Me: " + selected[0].AboutMe;
+
+                //Observations
+                var petobserving = (from po in petObservations
+                                    where po.Name == cboPet.SelectedValue.ToString()
+                                    select po).ToList();
+
+                this.dgJournal.DataSource = petobserving;
+
+                //Vaccinations
+                var petVaccinations = (from v in petObservations
+                                    where v.Name == cboPet.SelectedValue.ToString()
+                                    select v).ToList();
+
+                this.dgVaccination.DataSource = petVaccinations;
+
             }
         }
     }
