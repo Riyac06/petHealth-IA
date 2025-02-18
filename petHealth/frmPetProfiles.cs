@@ -68,6 +68,7 @@ namespace petHealth
                            select new 
                            { 
                                 Name = p.Name, 
+                                Age = p.Age,
                                 Weight = p.Weight,
                                 Breed = p.Breed,
                                 AboutMe = p.AboutMe
@@ -75,7 +76,7 @@ namespace petHealth
 
             if (selected.Count > 0)
             {
-                this.lblAge.Text = "Age: " + selected[0].Name;
+                this.lblAge.Text = "Age: " + selected[0].Age;
                 this.lblWeight.Text = "Weight: " + selected[0].Weight;
                 this.lblBreed.Text = "Breed: " + selected[0].Breed;
                 this.lblAboutMe.Text = "About Me: " + selected[0].AboutMe;

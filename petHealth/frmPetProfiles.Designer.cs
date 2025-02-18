@@ -37,10 +37,8 @@
             this.lblAboutMe = new System.Windows.Forms.Label();
             this.lblObsJournal = new System.Windows.Forms.Label();
             this.lblVaxRecord = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.treeView2 = new System.Windows.Forms.TreeView();
-            this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
+            this.listBoxObs = new System.Windows.Forms.ListBox();
+            this.listBoxVax = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnAddPet
@@ -93,7 +91,7 @@
             this.lblWeight.AutoSize = true;
             this.lblWeight.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeight.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblWeight.Location = new System.Drawing.Point(354, 101);
+            this.lblWeight.Location = new System.Drawing.Point(418, 83);
             this.lblWeight.Name = "lblWeight";
             this.lblWeight.Size = new System.Drawing.Size(66, 18);
             this.lblWeight.TabIndex = 24;
@@ -104,7 +102,7 @@
             this.lblBreed.AutoSize = true;
             this.lblBreed.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBreed.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblBreed.Location = new System.Drawing.Point(489, 83);
+            this.lblBreed.Location = new System.Drawing.Point(509, 83);
             this.lblBreed.Name = "lblBreed";
             this.lblBreed.Size = new System.Drawing.Size(55, 18);
             this.lblBreed.TabIndex = 25;
@@ -115,7 +113,7 @@
             this.lblAboutMe.AutoSize = true;
             this.lblAboutMe.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAboutMe.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblAboutMe.Location = new System.Drawing.Point(354, 117);
+            this.lblAboutMe.Location = new System.Drawing.Point(354, 101);
             this.lblAboutMe.Name = "lblAboutMe";
             this.lblAboutMe.Size = new System.Drawing.Size(85, 18);
             this.lblAboutMe.TabIndex = 26;
@@ -143,33 +141,21 @@
             this.lblVaxRecord.TabIndex = 28;
             this.lblVaxRecord.Text = "Vaccination Record: ";
             // 
-            // treeView1
+            // listBoxObs
             // 
-            this.treeView1.Location = new System.Drawing.Point(188, 163);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(413, 97);
-            this.treeView1.TabIndex = 29;
+            this.listBoxObs.FormattingEnabled = true;
+            this.listBoxObs.Location = new System.Drawing.Point(188, 160);
+            this.listBoxObs.Name = "listBoxObs";
+            this.listBoxObs.Size = new System.Drawing.Size(413, 95);
+            this.listBoxObs.TabIndex = 32;
             // 
-            // vScrollBar1
+            // listBoxVax
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(601, 158);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 80);
-            this.vScrollBar1.TabIndex = 30;
-            // 
-            // treeView2
-            // 
-            this.treeView2.Location = new System.Drawing.Point(188, 285);
-            this.treeView2.Name = "treeView2";
-            this.treeView2.Size = new System.Drawing.Size(413, 97);
-            this.treeView2.TabIndex = 31;
-            // 
-            // vScrollBar2
-            // 
-            this.vScrollBar2.Location = new System.Drawing.Point(601, 280);
-            this.vScrollBar2.Name = "vScrollBar2";
-            this.vScrollBar2.Size = new System.Drawing.Size(17, 80);
-            this.vScrollBar2.TabIndex = 32;
+            this.listBoxVax.FormattingEnabled = true;
+            this.listBoxVax.Location = new System.Drawing.Point(188, 284);
+            this.listBoxVax.Name = "listBoxVax";
+            this.listBoxVax.Size = new System.Drawing.Size(413, 95);
+            this.listBoxVax.TabIndex = 33;
             // 
             // frmPetProfiles
             // 
@@ -177,10 +163,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.vScrollBar2);
-            this.Controls.Add(this.treeView2);
-            this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.listBoxVax);
+            this.Controls.Add(this.listBoxObs);
             this.Controls.Add(this.lblVaxRecord);
             this.Controls.Add(this.lblObsJournal);
             this.Controls.Add(this.lblAboutMe);
@@ -209,9 +193,7 @@
         private System.Windows.Forms.Label lblAboutMe;
         private System.Windows.Forms.Label lblObsJournal;
         private System.Windows.Forms.Label lblVaxRecord;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.TreeView treeView2;
-        private System.Windows.Forms.VScrollBar vScrollBar2;
+        private System.Windows.Forms.ListBox listBoxObs;
+        private System.Windows.Forms.ListBox listBoxVax;
     }
 }

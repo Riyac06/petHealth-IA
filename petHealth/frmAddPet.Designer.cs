@@ -181,6 +181,7 @@
             this.Controls.Add(this.lblAddPet);
             this.Name = "frmAddPet";
             this.Text = "frmAddPet";
+            this.Load += new System.EventHandler(this.frmAddPet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

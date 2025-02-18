@@ -17,6 +17,7 @@ namespace petHealth
         {
             InitializeComponent();
         }
+        /*
         private void loginPage_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
@@ -26,7 +27,7 @@ namespace petHealth
         {
             this.CenterToScreen();
         }
-
+        */
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             //Close current form
@@ -40,6 +41,11 @@ namespace petHealth
         {
             //RUNs a NEW application with the desired form
             Application.Run(new frmPetProfiles());
+        }
+
+        private void frmAddPet_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
         }
     }
     }
