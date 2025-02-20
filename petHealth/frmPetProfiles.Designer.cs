@@ -39,6 +39,7 @@
             this.lblVaxRecord = new System.Windows.Forms.Label();
             this.dgJournal = new System.Windows.Forms.DataGridView();
             this.dgVaccination = new System.Windows.Forms.DataGridView();
+            this.lblNextAppointment = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgJournal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgVaccination)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +49,7 @@
             this.btnAddPet.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnAddPet.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPet.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddPet.Location = new System.Drawing.Point(601, 391);
+            this.btnAddPet.Location = new System.Drawing.Point(605, 388);
             this.btnAddPet.Name = "btnAddPet";
             this.btnAddPet.Size = new System.Drawing.Size(166, 36);
             this.btnAddPet.TabIndex = 21;
@@ -126,7 +127,7 @@
             this.lblObsJournal.AutoSize = true;
             this.lblObsJournal.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObsJournal.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblObsJournal.Location = new System.Drawing.Point(185, 139);
+            this.lblObsJournal.Location = new System.Drawing.Point(185, 132);
             this.lblObsJournal.Name = "lblObsJournal";
             this.lblObsJournal.Size = new System.Drawing.Size(202, 18);
             this.lblObsJournal.TabIndex = 27;
@@ -137,7 +138,7 @@
             this.lblVaxRecord.AutoSize = true;
             this.lblVaxRecord.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVaxRecord.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblVaxRecord.Location = new System.Drawing.Point(185, 263);
+            this.lblVaxRecord.Location = new System.Drawing.Point(185, 231);
             this.lblVaxRecord.Name = "lblVaxRecord";
             this.lblVaxRecord.Size = new System.Drawing.Size(163, 18);
             this.lblVaxRecord.TabIndex = 28;
@@ -146,18 +147,29 @@
             // dgJournal
             // 
             this.dgJournal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgJournal.Location = new System.Drawing.Point(188, 160);
+            this.dgJournal.Location = new System.Drawing.Point(188, 153);
             this.dgJournal.Name = "dgJournal";
-            this.dgJournal.Size = new System.Drawing.Size(376, 100);
+            this.dgJournal.Size = new System.Drawing.Size(376, 67);
             this.dgJournal.TabIndex = 29;
             // 
             // dgVaccination
             // 
             this.dgVaccination.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgVaccination.Location = new System.Drawing.Point(188, 284);
+            this.dgVaccination.Location = new System.Drawing.Point(188, 252);
             this.dgVaccination.Name = "dgVaccination";
-            this.dgVaccination.Size = new System.Drawing.Size(376, 100);
+            this.dgVaccination.Size = new System.Drawing.Size(376, 66);
             this.dgVaccination.TabIndex = 30;
+            // 
+            // lblNextAppointment
+            // 
+            this.lblNextAppointment.AutoSize = true;
+            this.lblNextAppointment.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNextAppointment.ForeColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblNextAppointment.Location = new System.Drawing.Point(185, 335);
+            this.lblNextAppointment.Name = "lblNextAppointment";
+            this.lblNextAppointment.Size = new System.Drawing.Size(155, 18);
+            this.lblNextAppointment.TabIndex = 31;
+            this.lblNextAppointment.Text = "Next Appointment: ";
             // 
             // frmPetProfiles
             // 
@@ -165,6 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblNextAppointment);
             this.Controls.Add(this.dgVaccination);
             this.Controls.Add(this.dgJournal);
             this.Controls.Add(this.lblVaxRecord);
@@ -199,5 +212,6 @@
         private System.Windows.Forms.Label lblVaxRecord;
         private System.Windows.Forms.DataGridView dgJournal;
         private System.Windows.Forms.DataGridView dgVaccination;
+        private System.Windows.Forms.Label lblNextAppointment;
     }
 }
