@@ -10,6 +10,7 @@ namespace petHealth.Services
     {
         private static List<Pet> pets;
         private static List<PetObservation> petobservation;
+        private static List<PetVaccination> petvaccination;
 
         public static List<Pet> GetPetData(string file)
         {
@@ -121,6 +122,47 @@ namespace petHealth.Services
             }
 
             return petobservation;
+        }
+        public static List<PetVaccination> GetPetVaccination(string file)
+        {
+            petvaccination = new List<PetVaccination>();
+            string line = string.Empty;
+
+            try
+            {
+                //Check if the file exists
+                if (File.Exists(file))
+                {
+                    //Create a Stream Reader
+                    using (StreamReader rdr = new StreamReader(file))
+                    {
+                        //Read the data in the file
+                        while ((line = rdr.ReadLine()) != null)
+                        {
+                            string[] data = line.Split('|');
+
+                            //Add data to the Customers Model
+                            petvaccination.Add(new PetVaccination()
+                            {
+                                Name = data[0],
+                                dt = DateTime.Parse(data[1]),
+                                Vaccination = data[2]
+                            });
+
+                        }
+                    }
+                }
+                else
+                {
+                    throw new Exception("File Not Found!");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return petvaccination;
         }
     }
 }

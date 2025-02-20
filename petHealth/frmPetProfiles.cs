@@ -16,6 +16,7 @@ namespace petHealth
     {
         List<Pet> pets = new List<Pet>();
         List<PetObservation> petObservations = new List<PetObservation>();
+        List<PetVaccination> petVaccinations = new List<PetVaccination>();
 
         public frmPetProfiles()
         {
@@ -29,14 +30,15 @@ namespace petHealth
             //Pet Info
             this.GetPets();
             this.GetObservations();
-            this.PetVaccinations();
+            this.GetVaccinations();
 
             this.SetControls();
         }
 
-        private void PetVaccinations()
+        private void GetVaccinations()
         {
-            throw new NotImplementedException();
+            PetVaccination vaccination = new PetVaccination();
+            petVaccinations = vaccination.GetPetVaccination();
         }
 
         private void GetObservations()
@@ -79,9 +81,15 @@ namespace petHealth
 
         private void SelectedPet(object sender, EventArgs e)
         {
+            //Clear out the DataGridViews
+            this.dgJournal.DataSource = null;
+            this.dgVaccination.DataSource = null;
+
+            string selectedPet = cboPet.SelectedValue.ToString();
+
             //LINQ
             var selected = (from p in pets
-                           where p.Name == cboPet.SelectedValue.ToString()
+                           where p.Name == selectedPet
                            select new 
                            { 
                                 Name = p.Name, 
@@ -100,17 +108,17 @@ namespace petHealth
 
                 //Observations
                 var petobserving = (from po in petObservations
-                                    where po.Name == cboPet.SelectedValue.ToString()
+                                    where po.Name == selectedPet
                                     select po).ToList();
 
                 this.dgJournal.DataSource = petobserving;
 
                 //Vaccinations
-                var petVaccinations = (from v in petObservations
-                                    where v.Name == cboPet.SelectedValue.ToString()
-                                    select v).ToList();
+                var petvaccinations = (from pv in petVaccinations
+                                       where pv.Name == selectedPet
+                                       select pv).ToList();
 
-                this.dgVaccination.DataSource = petVaccinations;
+                this.dgVaccination.DataSource = petvaccinations;
 
             }
         }
