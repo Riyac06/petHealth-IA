@@ -30,7 +30,7 @@
         {
             this.txtAbtMe = new System.Windows.Forms.TextBox();
             this.lblAbtMe = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtBreed = new System.Windows.Forms.TextBox();
             this.lblBreed = new System.Windows.Forms.Label();
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.lblWeight = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             this.lblAge = new System.Windows.Forms.Label();
             this.lblpetName = new System.Windows.Forms.Label();
             this.lblAddPet = new System.Windows.Forms.Label();
-            this.txtpetName = new System.Windows.Forms.TextBox();
+            this.txtPetName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtAbtMe
@@ -61,13 +61,13 @@
             this.lblAbtMe.TabIndex = 38;
             this.lblAbtMe.Text = "About Me: ";
             // 
-            // txtPass
+            // txtBreed
             // 
-            this.txtPass.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(245, 266);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(313, 25);
-            this.txtPass.TabIndex = 37;
+            this.txtBreed.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBreed.Location = new System.Drawing.Point(245, 266);
+            this.txtBreed.Name = "txtBreed";
+            this.txtBreed.Size = new System.Drawing.Size(313, 25);
+            this.txtBreed.TabIndex = 37;
             // 
             // lblBreed
             // 
@@ -153,13 +153,13 @@
             this.lblAddPet.TabIndex = 28;
             this.lblAddPet.Text = "Add Pet!";
             // 
-            // txtpetName
+            // txtPetName
             // 
-            this.txtpetName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpetName.Location = new System.Drawing.Point(245, 103);
-            this.txtpetName.Name = "txtpetName";
-            this.txtpetName.Size = new System.Drawing.Size(313, 25);
-            this.txtpetName.TabIndex = 40;
+            this.txtPetName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPetName.Location = new System.Drawing.Point(245, 103);
+            this.txtPetName.Name = "txtPetName";
+            this.txtPetName.Size = new System.Drawing.Size(313, 25);
+            this.txtPetName.TabIndex = 41;
             // 
             // frmAddPet
             // 
@@ -167,10 +167,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtpetName);
+            this.Controls.Add(this.txtPetName);
             this.Controls.Add(this.txtAbtMe);
             this.Controls.Add(this.lblAbtMe);
-            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtBreed);
             this.Controls.Add(this.lblBreed);
             this.Controls.Add(this.txtWeight);
             this.Controls.Add(this.lblWeight);
@@ -191,7 +191,7 @@
 
         private System.Windows.Forms.TextBox txtAbtMe;
         private System.Windows.Forms.Label lblAbtMe;
-        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtBreed;
         private System.Windows.Forms.Label lblBreed;
         private System.Windows.Forms.TextBox txtWeight;
         private System.Windows.Forms.Label lblWeight;
@@ -200,6 +200,6 @@
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblpetName;
         private System.Windows.Forms.Label lblAddPet;
-        private System.Windows.Forms.TextBox txtpetName;
+        private System.Windows.Forms.TextBox txtPetName;
     }
 }
