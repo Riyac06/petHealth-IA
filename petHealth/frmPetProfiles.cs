@@ -15,6 +15,7 @@ namespace petHealth
     public partial class frmPetProfiles : Form
     {
         List<Pet> pets = new List<Pet>();
+        List<PetAppointment> petAppointments = new List<PetAppointment>();
         List<PetObservation> petObservations = new List<PetObservation>();
         List<PetVaccination> petVaccinations = new List<PetVaccination>();
 
@@ -31,7 +32,7 @@ namespace petHealth
             this.GetPets();
             this.GetObservations();
             this.GetVaccinations();
-
+            this.GetAppointments();
             this.SetControls();
         }
 
@@ -51,6 +52,12 @@ namespace petHealth
         {
             Pet petObj = new Pet();
             pets = petObj.GetPets();
+        }
+
+        private void GetAppointments()
+        {
+            PetAppointment appointment = new PetAppointment();
+            petAppointments = appointment.GetPetAppointment();
         }
 
         private void SetControls()
@@ -98,6 +105,16 @@ namespace petHealth
                                 Breed = p.Breed,
                                 AboutMe = p.AboutMe
                            }).ToList();
+            // LINQ for appointment 
+
+            var selectedA = (from pa in petAppointments
+                             where pa.Name == selectedPet
+                            select new
+                            {
+                                Name = pa.Name,
+                                DateTime = pa.dt,
+                                Appointment = pa.Appointment
+                            }).ToList();
 
             if (selected.Count > 0)
             {
@@ -105,6 +122,7 @@ namespace petHealth
                 this.lblWeight.Text = "Weight: " + selected[0].Weight;
                 this.lblBreed.Text = "Breed: " + selected[0].Breed;
                 this.lblAboutMe.Text = "About Me: " + selected[0].AboutMe;
+                this.lblNextAppointment.Text = "Next Appointment: " + selectedA[0].DateTime.ToString() + " " + selectedA[0].Appointment;
 
                 //Observations
                 var petobserving = (from po in petObservations

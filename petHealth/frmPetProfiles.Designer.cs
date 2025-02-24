@@ -60,6 +60,7 @@
             // lblPetProfiles
             // 
             this.lblPetProfiles.AutoSize = true;
+            this.lblPetProfiles.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.lblPetProfiles.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPetProfiles.ForeColor = System.Drawing.Color.DarkSeaGreen;
             this.lblPetProfiles.Location = new System.Drawing.Point(338, 44);
@@ -70,9 +71,10 @@
             // 
             // cboPet
             // 
+            this.cboPet.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cboPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPet.FormattingEnabled = true;
-            this.cboPet.Location = new System.Drawing.Point(188, 83);
+            this.cboPet.Location = new System.Drawing.Point(166, 83);
             this.cboPet.Name = "cboPet";
             this.cboPet.Size = new System.Drawing.Size(160, 33);
             this.cboPet.TabIndex = 22;
@@ -81,9 +83,10 @@
             // lblAge
             // 
             this.lblAge.AutoSize = true;
+            this.lblAge.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblAge.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAge.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblAge.Location = new System.Drawing.Point(354, 83);
+            this.lblAge.Location = new System.Drawing.Point(332, 83);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(40, 18);
             this.lblAge.TabIndex = 23;
@@ -92,9 +95,10 @@
             // lblWeight
             // 
             this.lblWeight.AutoSize = true;
+            this.lblWeight.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblWeight.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeight.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblWeight.Location = new System.Drawing.Point(418, 83);
+            this.lblWeight.Location = new System.Drawing.Point(396, 83);
             this.lblWeight.Name = "lblWeight";
             this.lblWeight.Size = new System.Drawing.Size(66, 18);
             this.lblWeight.TabIndex = 24;
@@ -103,9 +107,10 @@
             // lblBreed
             // 
             this.lblBreed.AutoSize = true;
+            this.lblBreed.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblBreed.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBreed.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblBreed.Location = new System.Drawing.Point(509, 83);
+            this.lblBreed.Location = new System.Drawing.Point(487, 83);
             this.lblBreed.Name = "lblBreed";
             this.lblBreed.Size = new System.Drawing.Size(55, 18);
             this.lblBreed.TabIndex = 25;
@@ -114,9 +119,10 @@
             // lblAboutMe
             // 
             this.lblAboutMe.AutoSize = true;
+            this.lblAboutMe.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblAboutMe.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAboutMe.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblAboutMe.Location = new System.Drawing.Point(354, 101);
+            this.lblAboutMe.Location = new System.Drawing.Point(332, 101);
             this.lblAboutMe.Name = "lblAboutMe";
             this.lblAboutMe.Size = new System.Drawing.Size(85, 18);
             this.lblAboutMe.TabIndex = 26;
@@ -125,6 +131,7 @@
             // lblObsJournal
             // 
             this.lblObsJournal.AutoSize = true;
+            this.lblObsJournal.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.lblObsJournal.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObsJournal.ForeColor = System.Drawing.Color.DarkSeaGreen;
             this.lblObsJournal.Location = new System.Drawing.Point(185, 132);
@@ -136,6 +143,7 @@
             // lblVaxRecord
             // 
             this.lblVaxRecord.AutoSize = true;
+            this.lblVaxRecord.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.lblVaxRecord.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVaxRecord.ForeColor = System.Drawing.Color.DarkSeaGreen;
             this.lblVaxRecord.Location = new System.Drawing.Point(185, 231);
@@ -146,6 +154,7 @@
             // 
             // dgJournal
             // 
+            this.dgJournal.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgJournal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgJournal.Location = new System.Drawing.Point(188, 153);
             this.dgJournal.Name = "dgJournal";
@@ -154,6 +163,7 @@
             // 
             // dgVaccination
             // 
+            this.dgVaccination.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgVaccination.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgVaccination.Location = new System.Drawing.Point(188, 252);
             this.dgVaccination.Name = "dgVaccination";
@@ -163,9 +173,10 @@
             // lblNextAppointment
             // 
             this.lblNextAppointment.AutoSize = true;
+            this.lblNextAppointment.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblNextAppointment.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNextAppointment.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblNextAppointment.Location = new System.Drawing.Point(185, 335);
+            this.lblNextAppointment.Location = new System.Drawing.Point(163, 335);
             this.lblNextAppointment.Name = "lblNextAppointment";
             this.lblNextAppointment.Size = new System.Drawing.Size(155, 18);
             this.lblNextAppointment.TabIndex = 31;

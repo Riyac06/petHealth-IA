@@ -36,10 +36,10 @@
             this.lblWeight = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.txtAge = new System.Windows.Forms.TextBox();
-            this.txtpetName = new System.Windows.Forms.TextBox();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblpetName = new System.Windows.Forms.Label();
             this.lblAddPet = new System.Windows.Forms.Label();
+            this.txtpetName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtAbtMe
@@ -120,14 +120,6 @@
             this.txtAge.Size = new System.Drawing.Size(313, 25);
             this.txtAge.TabIndex = 32;
             // 
-            // txtpetName
-            // 
-            this.txtpetName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpetName.Location = new System.Drawing.Point(245, 95);
-            this.txtpetName.Name = "txtpetName";
-            this.txtpetName.Size = new System.Drawing.Size(313, 25);
-            this.txtpetName.TabIndex = 31;
-            // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
@@ -161,12 +153,21 @@
             this.lblAddPet.TabIndex = 28;
             this.lblAddPet.Text = "Add Pet!";
             // 
+            // txtpetName
+            // 
+            this.txtpetName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpetName.Location = new System.Drawing.Point(245, 103);
+            this.txtpetName.Name = "txtpetName";
+            this.txtpetName.Size = new System.Drawing.Size(313, 25);
+            this.txtpetName.TabIndex = 40;
+            // 
             // frmAddPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtpetName);
             this.Controls.Add(this.txtAbtMe);
             this.Controls.Add(this.lblAbtMe);
             this.Controls.Add(this.txtPass);
@@ -175,7 +176,6 @@
             this.Controls.Add(this.lblWeight);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtAge);
-            this.Controls.Add(this.txtpetName);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblpetName);
             this.Controls.Add(this.lblAddPet);
@@ -197,9 +197,9 @@
         private System.Windows.Forms.Label lblWeight;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox txtAge;
-        private System.Windows.Forms.TextBox txtpetName;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblpetName;
         private System.Windows.Forms.Label lblAddPet;
+        private System.Windows.Forms.TextBox txtpetName;
     }
 }
