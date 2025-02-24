@@ -30,7 +30,7 @@
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblAppSched = new System.Windows.Forms.Label();
-            this.txtObservation = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.cboPet = new System.Windows.Forms.ComboBox();
             this.lblSelectPet = new System.Windows.Forms.Label();
@@ -56,13 +56,13 @@
             this.lblAppSched.TabIndex = 14;
             this.lblAppSched.Text = "Appointment Scheduler";
             // 
-            // txtObservation
+            // txtDescription
             // 
-            this.txtObservation.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservation.Location = new System.Drawing.Point(255, 284);
-            this.txtObservation.Name = "txtObservation";
-            this.txtObservation.Size = new System.Drawing.Size(273, 25);
-            this.txtObservation.TabIndex = 36;
+            this.txtDescription.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(255, 284);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(273, 25);
+            this.txtDescription.TabIndex = 36;
             // 
             // lblDescription
             // 
@@ -127,7 +127,7 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblDT);
             this.Controls.Add(this.lblSelectPet);
-            this.Controls.Add(this.txtObservation);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.cboPet);
             this.Controls.Add(this.lblAppSched);
@@ -144,7 +144,7 @@
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblAppSched;
-        private System.Windows.Forms.TextBox txtObservation;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.ComboBox cboPet;
         private System.Windows.Forms.Label lblSelectPet;
