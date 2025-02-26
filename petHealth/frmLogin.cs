@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace petHealth
 {
@@ -40,11 +41,31 @@ namespace petHealth
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            //Close current form
-            this.Close();
-            //Create a thread to RUN a NEW application with the desired form
-            Thread t = new Thread(new ThreadStart(OpenHomeForm));
-            t.Start();
+            
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            if (AuthenticateUser(username, password))
+            {
+                MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                //Close current form
+                this.Close();
+                //Create a thread to RUN a NEW application with the desired form
+                Thread t = new Thread(new ThreadStart(OpenHomeForm));
+                t.Start();
+            }
+            else
+            {
+                MessageBox.Show("Login Unsuccessful!", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private bool AuthenticateUser(string username, string password)
+        {
+            return true;
+            //return username == "exampleUser" && password == "password123";
         }
 
         private void OpenHomeForm()

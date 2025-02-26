@@ -180,7 +180,7 @@
             this.Controls.Add(this.lblpetName);
             this.Controls.Add(this.lblAddPet);
             this.Name = "frmAddPet";
-            this.Text = "frmAddPet";
+            this.Text = "Add Pet";
             this.Load += new System.EventHandler(this.frmAddPet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

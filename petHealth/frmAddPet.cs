@@ -1,4 +1,5 @@
-﻿using System;
+﻿using petHealth.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,12 @@ namespace petHealth
         */
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            string Name = txtPetName.Text;
+            string Age = txtAge.Text;
+            string Weight = txtWeight.Text;
+            string Breed = txtBreed.Text;  
+            string AboutMe = txtAbtMe.Text;
+            string file = CurrentPath.GetDbasePath() + "\\" + "PetData.txt";
 
             if (!PassedValidation())
             {
@@ -42,6 +49,11 @@ namespace petHealth
             }
             else
             {
+                string dataToWrite = $"\n{Name}|{Age}|{Weight}|{Breed}|{AboutMe}";
+                // Append to file
+                System.IO.File.AppendAllText(file, dataToWrite);
+                MessageBox.Show("Pet Saved Sucessfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
                 //Close current form
                 this.Close();
                 //Create a thread to RUN a NEW application with the desired form
