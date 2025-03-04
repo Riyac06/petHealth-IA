@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtApp = new System.Windows.Forms.DateTimePicker();
             this.lblAppSched = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -38,12 +38,12 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtApp
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(286, 220);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtApp.Location = new System.Drawing.Point(286, 220);
+            this.dtApp.Name = "dtApp";
+            this.dtApp.Size = new System.Drawing.Size(200, 20);
+            this.dtApp.TabIndex = 0;
             // 
             // lblAppSched
             // 
@@ -111,12 +111,13 @@
             this.btnSubmit.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSubmit.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSubmit.Location = new System.Drawing.Point(308, 346);
+            this.btnSubmit.Location = new System.Drawing.Point(308, 332);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(166, 52);
             this.btnSubmit.TabIndex = 39;
             this.btnSubmit.Text = "Submit!";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // frmAppScheduler
             // 
@@ -131,7 +132,7 @@
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.cboPet);
             this.Controls.Add(this.lblAppSched);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtApp);
             this.Name = "frmAppScheduler";
             this.Text = "frmAppScheduler";
             this.Load += new System.EventHandler(this.frmAppScheduler_Load);
@@ -142,7 +143,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtApp;
         private System.Windows.Forms.Label lblAppSched;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblDescription;

@@ -86,6 +86,7 @@
             this.btnSubmit.TabIndex = 34;
             this.btnSubmit.Text = "Submit!";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblSelectPet
             // 
