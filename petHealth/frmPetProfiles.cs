@@ -122,7 +122,9 @@ namespace petHealth
                 this.lblWeight.Text = "Weight: " + selected[0].Weight;
                 this.lblBreed.Text = "Breed: " + selected[0].Breed;
                 this.lblAboutMe.Text = "About Me: " + selected[0].AboutMe;
-                // this.lblNextAppointment.Text = "Next Appointment: " + selectedA[0].DateTime.ToString() + " " + selectedA[0].Appointment;
+                
+                // Currently it is index out of range 
+                this.lblNextAppointment.Text = "Next Appointment: " + selectedA[0].DateTime.ToString() + " " + selectedA[0].Appointment;
 
                 //Observations
                 var petobserving = (from po in petObservations

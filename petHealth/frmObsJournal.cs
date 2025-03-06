@@ -51,6 +51,7 @@ namespace petHealth
         {
             //this.txtPetName.Text.Trim() == String.Empty 
             if (this.cboPet.Text.Trim() == String.Empty ||
+                this.dtObs.Text.Trim() == String.Empty ||
                 this.txtObservation.Text.Trim() == String.Empty)
                 return false;
             else
@@ -70,6 +71,7 @@ namespace petHealth
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string Name = cboPet.Text;
+            string Dt = dtObs.Text;
             string Description = txtObservation.Text;
             string file = CurrentPath.GetDbasePath() + "\\" + "PetObservation.txt";
 
@@ -84,7 +86,7 @@ namespace petHealth
             }
             else
             {
-                string dataToWrite = $"\n{Name}|{Description}";
+                string dataToWrite = $"\n{Name}|{Dt}|{Description}";
                 // Append to file
                 System.IO.File.AppendAllText(file, dataToWrite);
                 MessageBox.Show("Observation Added Sucessfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

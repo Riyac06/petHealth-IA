@@ -31,10 +31,10 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblDT = new System.Windows.Forms.Label();
             this.lblSelectPet = new System.Windows.Forms.Label();
-            this.txtObservation = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblVaxName = new System.Windows.Forms.Label();
             this.cboPet = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtVax = new System.Windows.Forms.DateTimePicker();
             this.lblRecordVax = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             this.btnSubmit.TabIndex = 46;
             this.btnSubmit.Text = "Submit!";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblDT
             // 
@@ -72,13 +73,13 @@
             this.lblSelectPet.TabIndex = 44;
             this.lblSelectPet.Text = "Select Pet: ";
             // 
-            // txtObservation
+            // txtDescription
             // 
-            this.txtObservation.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservation.Location = new System.Drawing.Point(263, 255);
-            this.txtObservation.Name = "txtObservation";
-            this.txtObservation.Size = new System.Drawing.Size(273, 25);
-            this.txtObservation.TabIndex = 43;
+            this.txtDescription.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(263, 255);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(273, 25);
+            this.txtDescription.TabIndex = 43;
             // 
             // lblVaxName
             // 
@@ -100,12 +101,12 @@
             this.cboPet.Size = new System.Drawing.Size(160, 33);
             this.cboPet.TabIndex = 41;
             // 
-            // dateTimePicker1
+            // dtVax
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(294, 191);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 40;
+            this.dtVax.Location = new System.Drawing.Point(294, 191);
+            this.dtVax.Name = "dtVax";
+            this.dtVax.Size = new System.Drawing.Size(200, 20);
+            this.dtVax.TabIndex = 40;
             // 
             // lblRecordVax
             // 
@@ -128,10 +129,10 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblDT);
             this.Controls.Add(this.lblSelectPet);
-            this.Controls.Add(this.txtObservation);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblVaxName);
             this.Controls.Add(this.cboPet);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtVax);
             this.Name = "frmVaxRecord";
             this.Text = "frmVaxRecord";
             this.Load += new System.EventHandler(this.frmVaxRecord_Load);
@@ -145,10 +146,10 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblDT;
         private System.Windows.Forms.Label lblSelectPet;
-        private System.Windows.Forms.TextBox txtObservation;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblVaxName;
         private System.Windows.Forms.ComboBox cboPet;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtVax;
         private System.Windows.Forms.Label lblRecordVax;
     }
 }

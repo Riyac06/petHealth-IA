@@ -34,6 +34,8 @@
             this.lblEnterObs = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblSelectPet = new System.Windows.Forms.Label();
+            this.lblDT = new System.Windows.Forms.Label();
+            this.dtObs = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblForgotPass
@@ -51,7 +53,7 @@
             // 
             this.cboPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPet.FormattingEnabled = true;
-            this.cboPet.Location = new System.Drawing.Point(306, 140);
+            this.cboPet.Location = new System.Drawing.Point(306, 134);
             this.cboPet.Name = "cboPet";
             this.cboPet.Size = new System.Drawing.Size(160, 33);
             this.cboPet.TabIndex = 23;
@@ -59,7 +61,7 @@
             // txtObservation
             // 
             this.txtObservation.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservation.Location = new System.Drawing.Point(230, 206);
+            this.txtObservation.Location = new System.Drawing.Point(230, 279);
             this.txtObservation.Name = "txtObservation";
             this.txtObservation.Size = new System.Drawing.Size(313, 25);
             this.txtObservation.TabIndex = 33;
@@ -69,7 +71,7 @@
             this.lblEnterObs.AutoSize = true;
             this.lblEnterObs.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnterObs.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblEnterObs.Location = new System.Drawing.Point(227, 185);
+            this.lblEnterObs.Location = new System.Drawing.Point(227, 258);
             this.lblEnterObs.Name = "lblEnterObs";
             this.lblEnterObs.Size = new System.Drawing.Size(154, 18);
             this.lblEnterObs.TabIndex = 32;
@@ -93,11 +95,29 @@
             this.lblSelectPet.AutoSize = true;
             this.lblSelectPet.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectPet.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblSelectPet.Location = new System.Drawing.Point(227, 119);
+            this.lblSelectPet.Location = new System.Drawing.Point(227, 113);
             this.lblSelectPet.Name = "lblSelectPet";
             this.lblSelectPet.Size = new System.Drawing.Size(91, 18);
             this.lblSelectPet.TabIndex = 35;
             this.lblSelectPet.Text = "Select Pet: ";
+            // 
+            // lblDT
+            // 
+            this.lblDT.AutoSize = true;
+            this.lblDT.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDT.ForeColor = System.Drawing.Color.DarkSeaGreen;
+            this.lblDT.Location = new System.Drawing.Point(227, 187);
+            this.lblDT.Name = "lblDT";
+            this.lblDT.Size = new System.Drawing.Size(177, 18);
+            this.lblDT.TabIndex = 47;
+            this.lblDT.Text = "Select Date and Time: ";
+            // 
+            // dtObs
+            // 
+            this.dtObs.Location = new System.Drawing.Point(280, 220);
+            this.dtObs.Name = "dtObs";
+            this.dtObs.Size = new System.Drawing.Size(200, 20);
+            this.dtObs.TabIndex = 46;
             // 
             // frmObsJournal
             // 
@@ -105,6 +125,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblDT);
+            this.Controls.Add(this.dtObs);
             this.Controls.Add(this.lblSelectPet);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtObservation);
@@ -127,5 +149,7 @@
         private System.Windows.Forms.Label lblEnterObs;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblSelectPet;
+        private System.Windows.Forms.Label lblDT;
+        private System.Windows.Forms.DateTimePicker dtObs;
     }
 }
