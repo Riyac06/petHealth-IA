@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentManager.cs" />
     <Compile Include="frmAddPet.cs">
       <SubType>Form</SubType>
     </Compile>

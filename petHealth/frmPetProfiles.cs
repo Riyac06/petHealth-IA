@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -86,6 +87,8 @@ namespace petHealth
             Application.Run(new frmAddPet());
         }
 
+        
+
         private void SelectedPet(object sender, EventArgs e)
         {
             //Clear out the DataGridViews
@@ -116,15 +119,18 @@ namespace petHealth
                                 Appointment = pa.Appointment
                             }).ToList();
 
+
             if (selected.Count > 0)
             {
                 this.lblAge.Text = "Age: " + selected[0].Age;
                 this.lblWeight.Text = "Weight: " + selected[0].Weight;
                 this.lblBreed.Text = "Breed: " + selected[0].Breed;
                 this.lblAboutMe.Text = "About Me: " + selected[0].AboutMe;
-                
-                // Currently it is index out of range 
-                this.lblNextAppointment.Text = "Next Appointment: " + selectedA[0].DateTime.ToString() + " " + selectedA[0].Appointment;
+
+                //Appointments 
+                var appointmentManager = new AppointmentManager(petAppointments);
+                string appointmentDisplay = appointmentManager.GetAppointmentDisplay(selectedPet);
+                this.lblNextAppointment.Text = appointmentDisplay;
 
                 //Observations
                 var petobserving = (from po in petObservations
@@ -141,6 +147,20 @@ namespace petHealth
                 this.dgVaccination.DataSource = petvaccinations;
 
             }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            //Close current form
+            this.Close();
+            //Create a thread to RUN a NEW application with the desired form
+            Thread t = new Thread(new ThreadStart(OpenHomeForm));
+            t.Start();
+        }
+        private void OpenHomeForm()
+        {
+            //RUNs a NEW application with the desired form
+            Application.Run(new frmHome());
         }
     }
  }

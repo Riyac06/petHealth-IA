@@ -40,6 +40,7 @@
             this.dgJournal = new System.Windows.Forms.DataGridView();
             this.dgVaccination = new System.Windows.Forms.DataGridView();
             this.lblNextAppointment = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgJournal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgVaccination)).BeginInit();
             this.SuspendLayout();
@@ -176,11 +177,24 @@
             this.lblNextAppointment.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblNextAppointment.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNextAppointment.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblNextAppointment.Location = new System.Drawing.Point(163, 335);
+            this.lblNextAppointment.Location = new System.Drawing.Point(185, 336);
             this.lblNextAppointment.Name = "lblNextAppointment";
             this.lblNextAppointment.Size = new System.Drawing.Size(155, 18);
             this.lblNextAppointment.TabIndex = 31;
             this.lblNextAppointment.Text = "Next Appointment: ";
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnHome.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnHome.Location = new System.Drawing.Point(605, 38);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(166, 36);
+            this.btnHome.TabIndex = 32;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // frmPetProfiles
             // 
@@ -188,6 +202,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.lblNextAppointment);
             this.Controls.Add(this.dgVaccination);
             this.Controls.Add(this.dgJournal);
@@ -224,5 +239,6 @@
         private System.Windows.Forms.DataGridView dgJournal;
         private System.Windows.Forms.DataGridView dgVaccination;
         private System.Windows.Forms.Label lblNextAppointment;
+        private System.Windows.Forms.Button btnHome;
     }
 }

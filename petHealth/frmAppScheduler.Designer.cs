@@ -36,6 +36,7 @@
             this.lblSelectPet = new System.Windows.Forms.Label();
             this.lblDT = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dtApp
@@ -119,12 +120,26 @@
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnHome.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnHome.Location = new System.Drawing.Point(571, 62);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(166, 36);
+            this.btnHome.TabIndex = 49;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // frmAppScheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblDT);
             this.Controls.Add(this.lblSelectPet);
@@ -151,5 +166,6 @@
         private System.Windows.Forms.Label lblSelectPet;
         private System.Windows.Forms.Label lblDT;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnHome;
     }
 }

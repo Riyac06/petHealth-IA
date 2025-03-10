@@ -73,7 +73,7 @@ namespace petHealth
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string Name = cboPet.Text;
-            string Dt = dtApp.Text;
+            string Dt = DateTime.Parse(dtApp.Text).ToString("MM/dd/yyyy HH:mm");
             string Description = txtDescription.Text;
             string file = CurrentPath.GetDbasePath() + "\\" + "petAppointment.txt";
 
@@ -99,6 +99,15 @@ namespace petHealth
                 Thread t = new Thread(new ThreadStart(OpenHomeForm));
                 t.Start();
             }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            //Close current form
+            this.Close();
+            //Create a thread to RUN a NEW application with the desired form
+            Thread t = new Thread(new ThreadStart(OpenHomeForm));
+            t.Start();
         }
     }
 }

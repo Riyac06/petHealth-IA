@@ -36,6 +36,7 @@
             this.cboPet = new System.Windows.Forms.ComboBox();
             this.dtVax = new System.Windows.Forms.DateTimePicker();
             this.lblRecordVax = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -119,12 +120,26 @@
             this.lblRecordVax.TabIndex = 47;
             this.lblRecordVax.Text = "Record Vaccination ";
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnHome.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnHome.Location = new System.Drawing.Point(567, 34);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(166, 36);
+            this.btnHome.TabIndex = 48;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // frmVaxRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.lblRecordVax);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblDT);
@@ -151,5 +166,6 @@
         private System.Windows.Forms.ComboBox cboPet;
         private System.Windows.Forms.DateTimePicker dtVax;
         private System.Windows.Forms.Label lblRecordVax;
+        private System.Windows.Forms.Button btnHome;
     }
 }
