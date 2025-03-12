@@ -47,7 +47,8 @@ namespace petHealth
 
             if (AuthenticateUser(username, password))
             {
-                MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Login Successful!", "Success", 
+                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 //Close current form
                 this.Close();
@@ -57,7 +58,8 @@ namespace petHealth
             }
             else
             {
-                MessageBox.Show("Login Unsuccessful!", "Try Again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Login Unsuccessful!", "Try Again", 
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

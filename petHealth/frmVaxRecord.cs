@@ -90,7 +90,8 @@ namespace petHealth
                 string dataToWrite = $"\n{Name}|{Dt}|{Description}";
                 // Append to file
                 System.IO.File.AppendAllText(file, dataToWrite);
-                MessageBox.Show("Vaccination Recorded Sucessfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vaccination Recorded Sucessfully!", "Success", 
+                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 //Close current form
                 this.Close();

@@ -1,3 +1,4 @@
 ﻿Rocket|5|20|Golden Retriever|Likes fetch
 Groot|10|30|Tree|Leaves
 Debbie|11|9.4|Corgi|Loves head pats and cuddles!
+Scott|3|6.2|Mutt|Scruffy and high energy

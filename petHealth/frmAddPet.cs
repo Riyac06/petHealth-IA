@@ -40,7 +40,8 @@ namespace petHealth
 
             if (!PassedValidation())
             {
-                MessageBox.Show("Must enter information in all required fields!", "Pet Health", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Must enter information in all required fields!", "Add Pet", 
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Close current form
                 this.Close();
                 //Create a thread to RUN a NEW application with the desired form
@@ -52,7 +53,8 @@ namespace petHealth
                 string dataToWrite = $"\n{Name}|{Age}|{Weight}|{Breed}|{AboutMe}";
                 // Append to file
                 System.IO.File.AppendAllText(file, dataToWrite);
-                MessageBox.Show("Pet Saved Sucessfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pet Saved Sucessfully!", "Success", 
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 //Close current form
                 this.Close();

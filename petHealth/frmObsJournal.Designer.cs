@@ -149,7 +149,7 @@
             this.Controls.Add(this.cboPet);
             this.Controls.Add(this.lblForgotPass);
             this.Name = "frmObsJournal";
-            this.Text = "frmObsJournal";
+            this.Text = "Observation Journal";
             this.Load += new System.EventHandler(this.frmObsJournal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
