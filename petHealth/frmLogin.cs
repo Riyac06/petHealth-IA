@@ -1,9 +1,11 @@
-﻿using System;
+﻿using petHealth.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,6 +16,8 @@ namespace petHealth
 {
     public partial class frmLogin : Form
     {
+        List<userData> users = new List<userData>();
+
         public frmLogin()
         {
             InitializeComponent();
@@ -22,6 +26,7 @@ namespace petHealth
         private void loginPage_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            this.GetUser();
         }
 
         private void goSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -64,10 +69,49 @@ namespace petHealth
 
         }
 
+        private void GetUser()
+        {
+            userData user = new userData();
+            users = user.GetUser();
+        }
+
         private bool AuthenticateUser(string username, string password)
         {
-            return true;
-            //return username == "exampleUser" && password == "password123";
+            string file = CurrentPath.GetDbasePath() + "\\" + "userData.txt";
+            string hashedPassword = HashPassword(password);
+            string user = txtUsername.ToString();
+            //LINQ
+            var selected = (from u in users
+                            where u.Username == user
+                            select new
+                            {
+                                Email = u.Email,
+                                Phone = u.Phone,
+                                Username = u.Username,
+                                Password = u.Password,
+                            }).ToList();
+
+            if (this.txtUsername.Text.Trim() == String.Empty ||
+                this.txtPassword.Text.Trim() == String.Empty)
+                return false;
+            else if (username == selected[0].Username && hashedPassword == selected[0].Password)
+                {
+                    return true;
+                }
+            else
+            {
+                return false;
+            }
+            
+        }
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
+                byte[] hashedBytes = sha256.ComputeHash(passwordBytes);
+                return Convert.ToBase64String(hashedBytes);
+            }
         }
 
         private void OpenHomeForm()

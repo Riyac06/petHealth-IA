@@ -1,0 +1,1 @@
+﻿exampleUser@gmail.com|1234567890|exampleUser|password123|
