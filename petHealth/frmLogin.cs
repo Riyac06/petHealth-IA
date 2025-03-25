@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -46,11 +47,7 @@ namespace petHealth
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
-            if (AuthenticateUser(username, password))
+            if (AuthenticateUser())
             {
                 MessageBox.Show("Login Successful!", "Success", 
                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -75,36 +72,73 @@ namespace petHealth
             users = user.GetUser();
         }
 
-        private bool AuthenticateUser(string username, string password)
+        private bool AuthenticateUser()
         {
-            string file = CurrentPath.GetDbasePath() + "\\" + "userData.txt";
-            string hashedPassword = HashPassword(password);
-            string user = txtUsername.ToString();
-            //LINQ
-            var selected = (from u in users
-                            where u.Username == user
-                            select new
-                            {
-                                Email = u.Email,
-                                Phone = u.Phone,
-                                Username = u.Username,
-                                Password = u.Password,
-                            }).ToList();
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text;
 
-            if (this.txtUsername.Text.Trim() == String.Empty ||
-                this.txtPassword.Text.Trim() == String.Empty)
+            // Check for empty inputs
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
                 return false;
-            else if (username == selected[0].Username && hashedPassword == selected[0].Password)
-                {
-                    return true;
-                }
-            else
+
+            // Get the path to userData.txt file
+            string filePath = CurrentPath.GetDbasePath() + "\\" + "userData.txt";
+
+            // Check if file exists
+            if (!File.Exists(filePath))
             {
+                MessageBox.Show("User data file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            
+
+            try
+            {
+                // Read all lines from the file
+                string[] userLines = File.ReadAllLines(filePath);
+
+                // Search for matching username
+                foreach (string line in userLines)
+                {
+                    // Split the line by the pipe character
+                    string[] userData = line.Split('|');
+
+                    // Check if the line has the expected format (email|phone|username|password|)
+                    // This means there should be at least 4 elements in the array
+                    if (userData.Length >= 4)
+                    {
+                        string fileEmail = userData[0];
+                        string filePhone = userData[1];
+                        string fileUsername = userData[2];
+                        string filePassword = userData[3];
+
+                        // Check if username matches
+                        if (fileUsername == username)
+                        {
+                            // Check if password matches
+                            if (filePassword == password)
+                            {
+                                return true; // Authentication successful
+                            }
+                            else
+                            {
+                                return false; // Password doesn't match
+                            }
+                        }
+                    }
+                }
+
+                // If we get here, no matching username was found
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error reading user data: {ex.Message}", "Error",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
-        private string HashPassword(string password)
+
+        /* private string HashPassword(string password)
         {
             using (SHA256 sha256 = SHA256.Create())
             {
@@ -113,7 +147,7 @@ namespace petHealth
                 return Convert.ToBase64String(hashedBytes);
             }
         }
-
+        */
         private void OpenHomeForm()
         {
             //RUNs a NEW application with the desired form
